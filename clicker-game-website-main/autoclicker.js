@@ -3,6 +3,9 @@ let autoclickLevel = 10; // Autoclicks every 10 seconds
 let autoclickerEnabled = false;
 let autoclickerCost = 100;
 let autoclickerCostMultiplier = 1;
+
+updateAutoClicker();
+
 function updateAutoClicker() {
   document.getElementById('autoclicker').innerText = 'Autoclicker: $' + autoclickerCost;
 }
