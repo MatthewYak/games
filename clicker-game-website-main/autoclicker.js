@@ -7,7 +7,8 @@ let autoclickerCostMultiplier = 1;
 updateAutoClicker();
 
 function updateAutoClicker() {
-  document.getElementById('autoclicker').innerText = 'Autoclicker: $' + autoclickerCost;
+  document.getElementById('autoclickerCost').innerText = '$' + Math.round(autoclickerCost);
+  document.getElementById('autoclickRate').innerText = (Math.round(autoclickLevel * 10000) / 10000);
 }
 
 
@@ -25,8 +26,6 @@ function disableAutoClicker() {
 // Upgrade autoclicker
 function UpgradeAutoClicker() {
   if (balance >= autoclickerCost) {
-
-
     if (autoclickLevel > 1) {
       balance -= autoclickerCost;
       autoclickerCostMultiplier += 0.1;
@@ -84,7 +83,8 @@ function UpgradeAutoClicker() {
       updateAutoClicker();
       updateCount();
     } else {
-      document.getElementById('autoclicker').innerText = 'Autoclicker: Maxed';
+      document.getElementById('autoclicker').innerText = 'Maxed';
+      document.getElementById('autoclicker').disabled = true;
     }
   }
 }

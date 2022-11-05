@@ -14,16 +14,38 @@
 
 <body>
 
-  <h1 id="Text">The Open Source Clicker Game</h1>
+  <div class="container">
+    <h1 id="Text">The Open Source Clicker Game</h1>
 
-  <div class="moneyBtnContainer">
-    <button onclick="Click()" id="collectmoney" class="moneyBtn">Click me for cash!</button>
-  </div>
+    <div class="moneyBtnContainer">
+      <button onclick="Click()" id="collectmoney" class="moneyBtn">Click me for cash!</button>
+    </div>
 
-  <div class="upgradesPanel">
-    <button onclick="Upgrade()" id="Multiplier" class="upgradeBtn">Upgrade Multiplier</button>
-    <!--Autoclicker-->
-    <button onclick="UpgradeAutoClicker()" id="autoclicker" class="upgradeBtn">AutoClicker</button>
+    <div class="upgradesPanel">
+      <div class="upgradeBtnContainer">
+        <div class="upgrade">
+          <h2 class="upgradeText">Multiplier</h2>
+          <p class="upgradeDescription">Clicks give you 1 more cash every click.</p>
+          <button onclick="UpgradeMultiplier()" id="Multiplier" class="upgradeBtn">Upgrade</button>
+          <h3 id="MultiplierCost" class="upgradeCost"></h3>
+        </div>
+      </div>
+
+      <div class="upgradeBtnContainer">
+        <div class="upgrade">
+          <!--Autoclicker-->
+          <h2 class="upgradeText">Autoclicker</h2>
+          <p class="upgradeDescription">Current: Autoclicks every <span id="autoclickRate"></span> seconds.</p>
+          <button onclick="UpgradeAutoClicker()" id="autoclicker" class="upgradeBtn">Upgrade</button>
+          <h3 id="autoclickerCost" class="upgradeCost"></h3>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="moneyPanel">
+      <h2 class="moneyPanelText">$<span id="money">0</span></h2>
+    </div>
 
   </div>
 

@@ -1,14 +1,16 @@
-document.getElementById('Multiplier').innerText = 'Upgrade Multiplier ($' + (multiplierCost) + ')'
+updateMultiplier();
 
-function Upgrade() {
-  if (balance >= (multiplierCost * multiplierCostMultiplier)) {
-
-    multiplier += 0.5 * multiplierCostMultiplier;
-    balance -= (multiplierCost * multiplierCostMultiplier);
-
-    multiplierCostMultiplier += 0.5;
-    multiplierCost = (multiplierCost * multiplierCostMultiplier);
-    updateCount()
-    document.getElementById('Multiplier').innerText = 'Upgrade Multiplier ($' + (multiplierCost * multiplierCostMultiplier) + ')'
+function UpgradeMultiplier() {
+  if (balance >= multiplierCost) {
+    balance -= multiplierCost;
+    multiplierCostMultiplier += 0.1;
+    multiplierCost = Math.round(multiplierCost * multiplierCostMultiplier);
+    multiplier += Math.round(1 * multiplier);
+    updateMultiplier();
+    updateCount();
   }
+}
+
+function updateMultiplier() {
+  document.getElementById('MultiplierCost').innerText = '$' + multiplierCost;
 }
