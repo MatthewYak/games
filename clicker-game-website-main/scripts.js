@@ -28,17 +28,12 @@ function toFixed(x) {
 }
 
 function convert(value) {
-  if (value >= 1000000000000) {
-    return (value / 1000000000000).toFixed(1) + "T";
+  let suffixes = ["", "K", "M", "B", "T", "Qa", "Qi", "Sx", "Sp", "Oc", "No", "Dc", "UDc", "DDc", "TDc", "QaDc", "QiDc", "SxDc", "SpDc", "ODc", "NDc", "Vg", "UVg", "DVg", "TVg", "QaVg", "QiVg", "SxVg", "SpVg", "OVg", "NVg", "Tg", "UTg", "DTg", "TTg", "QaTg", "QiTg", "SxTg", "SpTg", "OTg", "NTg", "Qd", "UQd", "DQd", "TQd", "QaQd", "QiQd", "SxQd", "SpQd", "OQd", "NQd", "Qq", "UQq", "DQq", "TQq", "QaQq", "QiQq", "SxQq", "SpQq", "OQq", "NQq", "Sx", "USx", "DSx", "TSx", "QaSx", "QiSx", "SxSx", "SpSx", "OSx", "NSx", "Sp", "USp", "DSp", "TSp", "QaSp", "QiSp", "SxSp", "SpSp", "OSp", "NSp", "Og", "UOg", "DOg", "TOg", "QaOg", "QiOg", "SxOg", "SpOg", "OOg", "NOg", "No", "UNo", "DNo", "TNo", "QaNo", "QiNo", "SxNo", "SpNo", "ONo", "NNo", "Ce", "UCe", "DCe", "TCe", "QaCe", "QiCe", "SxCe", "SpCe", "OCe", "NCe"];
+  if(value < 1000) return value;
+  let suffixNum = Math.floor(("" + value).length / 3); // 3 is the number of digits in each group
+  let shortValue = parseFloat((suffixNum != 0 ? (value / Math.pow(1000, suffixNum)) : value).toPrecision(2));
+  if (shortValue % 1 != 0) {
+    shortValue = shortValue.toFixed(1);
   }
-  else if (value >= 1000000000) {
-    return (value / 1000000000).toFixed(2) + 'B';
-  }
-  else if (value >= 1000000) {
-    value = (value / 1000000) + "M"
-  }
-  else if (value >= 1000) {
-    value = (value / 1000) + "K";
-  }
-  return value;
+  return shortValue + suffixes[suffixNum];
 }
