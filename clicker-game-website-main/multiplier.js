@@ -6,7 +6,7 @@ function Upgrade() {
     multiplier += 0.5 * multiplierCostMultiplier;
     balance -= (multiplierCost * multiplierCostMultiplier);
 
-    multiplierCostMultiplier += 1;
+    multiplierCostMultiplier += 0.5;
     multiplierCost = (multiplierCost * multiplierCostMultiplier);
     updateCount()
     document.getElementById('Multiplier').innerText = 'Upgrade Multiplier ($' + (multiplierCost * multiplierCostMultiplier) + ')'
