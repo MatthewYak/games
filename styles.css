@@ -1,0 +1,74 @@
+/* import ubuntu font */
+@import url("https://fonts.googleapis.com/css?family=Ubuntu");
+
+html {
+	background-color: #f5f5f5;
+}
+
+body {
+	width: 50%;
+	margin: 0 auto;
+	font-family: "Ubuntu", sans-serif;
+}
+
+@media screen and (max-width: 768px) {
+	body {
+		width: 90%;
+	}
+}
+
+.MainMessage {
+	background-color: #f5f5f5;
+	border: 1px solid #e5e5e5;
+	border-radius: 3px;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+.SubMessage {
+	background-color: #f5f5f5;
+	border: 1px solid #e5e5e5;
+	border-radius: 3px;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+.ErrorMessage {
+	background-color: #f5f5f5;
+	border: 1px solid #e5e5e5;
+	border-radius: 3px;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+.CustomClickerGame {
+	background-color: #f5f5f5;
+	border: 1px solid #e5e5e5;
+	border-radius: 3px;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+.TRexGameChrome {
+	background-color: #f5f5f5;
+	border: 1px solid #e5e5e5;
+	border-radius: 3px;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+.CookieClicker {
+	background-color: #f5f5f5;
+	border: 1px solid #e5e5e5;
+	border-radius: 3px;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+.GithubProjects {
+	background-color: #f5f5f5;
+	border: 1px solid #e5e5e5;
+	border-radius: 3px;
+	padding: 10px;
+	margin-bottom: 10px;
+}
