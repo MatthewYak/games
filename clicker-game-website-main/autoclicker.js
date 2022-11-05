@@ -29,7 +29,7 @@ function UpgradeAutoClicker() {
 
     if (autoclickLevel > 1) {
       balance -= autoclickerCost;
-      autoclickerCostMultiplier += 0.5;
+      autoclickerCostMultiplier += 0.1;
       autoclickerCost = autoclickerCost * autoclickerCostMultiplier;
       autoclickLevel -= 1;
       if (autoclickerEnabled == false) {
@@ -41,12 +41,34 @@ function UpgradeAutoClicker() {
       }
       updateAutoClicker();
       updateCount();
+    } else if (autoclickLevel > 0.5) {
+      balance -= autoclickerCost;
+      autoclickerCostMultiplier += 0.1;
+      autoclickerCost = autoclickerCost * autoclickerCostMultiplier;
+      autoclickLevel -= 0.5;
+      if (autoclickerEnabled == false) {
+        enableAutoClicker();
+        autoclickerEnabled = true;
+      } else {
+        disableAutoClicker();
+        enableAutoClicker();
+      }
+      updateAutoClicker();
+      updateCount();
+    } else if (autoclickLevel > 0.1) {
+      balance -= autoclickerCost;
+      autoclickerCostMultiplier += 0.1;
+      autoclickerCost = autoclickerCost * autoclickerCostMultiplier;
+      autoclickLevel -= 0.1;
+      if (autoclickerEnabled == false) {
+        enableAutoClicker();
+        autoclickerEnabled = true;
+      } else {
+        disableAutoClicker();
+        enableAutoClicker();
+      }
     } else {
       document.getElementById('autoclicker').innerText = 'Autoclicker: Maxed';
     }
-
-
-
-
   }
 }
