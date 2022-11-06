@@ -1,11 +1,14 @@
+let multiplierMultiplier = 1;
+
 updateMultiplier();
 
 function UpgradeMultiplier() {
   if (balance >= multiplierCost) {
     balance -= multiplierCost;
-    multiplierCostMultiplier += 0.5;
+    multiplierCostMultiplier += 0.2;
     multiplierCost = Math.round(multiplierCost * multiplierCostMultiplier);
-    multiplier += Math.round(1 * multiplier);
+    multiplier += Math.round(1 * multiplierMultiplier);
+    multiplierMultiplier += 0.5;
     updateMultiplier();
     updateCount();
   }
