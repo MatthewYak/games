@@ -24,13 +24,73 @@ const options = [
     }
   },
   {
-    message: "",
+    message: "One free multiplier upgrade!",
     effect: function () {
       // do nothing
     }
   },
   {
-    message: "",
+    message: "You lost a multiplier upgrade!",
+    effect: function () {
+      // do nothing
+    }
+  },
+  {
+    message: "Multiplier level reset back to 0!",
+    effect: function () {
+      // do nothing
+    }
+  },
+  {
+    message: "You gained 100K cash!",
+    effect: function () {
+      // do nothing
+    }
+  },
+  {
+    message: "You lost 100K cash!",
+    effect: function () {
+      // do nothing
+    }
+  },
+  {
+    message: "You gained 1M Cash!",
+    effect: function () {
+      // do nothing
+    }
+  },
+  {
+    message: "You lost 1M Cash!",
+    effect: function () {
+      // do nothing
+    }
+  },
+  {
+    message: "Multiplier reduced 20% for 20 seconds!",
+    effect: function () {
+      // do nothing
+    }
+  },
+  {
+    message: "Multiplier level upgraded 2x",
+    effect: function () {
+      // do nothing
+    }
+  },
+  {
+    message: "You got nothing!",
+    effect: function () {
+      // do nothing
+    }
+  },
+  {
+    message: "You can't buy any upgrades for the next 10 seconds!",
+    effect: function () {
+      // do nothing
+    }
+  },
+  {
+    message: "Bankrupt! Everyting is reset back to 0!",
     effect: function () {
       // do nothing
     }
