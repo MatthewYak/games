@@ -7,7 +7,7 @@ function UpgradeMultiplier() {
     balance -= multiplierCost;
     multiplierCostMultiplier += 0.2;
     multiplierCost = Math.round(multiplierCost * multiplierCostMultiplier);
-    multiplier += Math.round(1 * multiplierMultiplier);
+    multiplier += Math.round(1 * multiplier * multiplierMultiplier);
     multiplierMultiplier += 0.5;
     updateMultiplier();
     updateCount();
