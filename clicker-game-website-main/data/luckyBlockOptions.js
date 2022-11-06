@@ -23,4 +23,17 @@ const options = [
       updateCount();
     }
   },
+  {
+    message: "",
+    effect: function () {
+      // do nothing
+    }
+  },
+  {
+    message: "",
+    effect: function () {
+      // do nothing
+    }
+  },
+  //...
 ]
