@@ -16,4 +16,11 @@ const options = [
       updateCount();
     }
   },
+  {
+    message: "You lost 20% of your total money.",
+    effect: function () {
+      balance -= Math.round(balance * 0.2);
+      updateCount();
+    }
+  },
 ]
