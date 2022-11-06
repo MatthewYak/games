@@ -18,6 +18,15 @@
   <div class="container">
     <h1 id="Text">The Open Source Clicker Game</h1>
 
+    <div class="moneyPanel">
+      <h2 class="moneyPanelText">$<span id="money">0</span></h2>
+      <div id="luckyBlockMessage">
+        <!-- This is where the message will be displayed -->
+      </div>
+    </div>
+
+
+
     <div class="moneyBtnContainer">
       <button onclick="Click()" id="collectmoney" class="moneyBtn">Click me for cash!</button>
     </div>
@@ -41,12 +50,19 @@
           <h3 id="autoclickerCost" class="upgradeCost"></h3>
         </div>
       </div>
+
+      <!--Lucky block-->
+      <div class="upgradeBtnContainer">
+        <div class="upgrade">
+          <h2 class="upgradeText">Lucky Block</h2>
+          <p class="upgradeDescription">Is luck on your side?</p>
+          <button onclick="BuyLuckyBlock()" id="luckyBlock" class="upgradeBtn">Buy</button>
+          <h3 id="luckyBlockCost" class="upgradeCost"></h3>
+        </div>
+      </div>
+
     </div>
 
-
-    <div class="moneyPanel">
-      <h2 class="moneyPanelText">$<span id="money">0</span></h2>
-    </div>
 
   </div>
 
@@ -62,6 +78,10 @@
 
   <!--Autoclicker script import-->
   <script src="autoclicker.js"></script>
+
+  <!--Lucky block script import-->
+  <script src="luckyBlock.js"></script>
+  <script src="./data/luckyBlockOptions.js"></script>
 
 </body>
 

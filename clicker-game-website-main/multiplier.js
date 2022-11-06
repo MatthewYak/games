@@ -17,4 +17,5 @@ function UpgradeMultiplier() {
 
 function updateMultiplier() {
   document.getElementById('MultiplierCost').innerText = '$' + convert(Math.round(multiplierCost));
+  document.getElementById('luckyBlockCost').innerText = '$' + convert(Math.round(multiplier * 100));
 }

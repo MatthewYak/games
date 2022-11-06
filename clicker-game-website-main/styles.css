@@ -53,12 +53,15 @@ body {
 	height: 50px;
 	background-color: #2c3e50;
 	border-radius: 5px;
-	position: absolute;
+	position: sticky;
 	top: 0;
 	right: 0;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	margin: 10px;
+	border: 1px solid #fff;
+	padding: 10px;
 }
 
 /* Style the money panel text */
@@ -123,6 +126,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	margin: 0 20px;
+	box-shadow: #27ae5f10 0px 0px 10rem 0px;
 }
 
 /* Style the upgrade text */
